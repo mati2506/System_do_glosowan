@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_rejestracji.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji">
+    </div>
+    <div class="panel_wrapper">
+        <div class="info">
+            <p>{{info[0]}} {{glosowanie}}?</p>
+        </div>
+        <div class="panel">
+            <div class="info">{{info[1]}}</div>
+            <div id="user_list">
+                <ul>
+                    {% for user in users %}
+                    <li class="record">
+                        <div class="text">
+                        {{user[0]}} {{user[1]}} ({{user[2]}})
+                    </div>
+                    </li>
+                    {% else %}
+                    <li class="record">
+                    <div class="text">
+                        {{info[2]}}
+                    </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div id="lower">
+                <a href="{{ url_for('zarzadzaj_uczestnikami') }}" class="lowerButton"><input type="button" class="customButton" value="Nie"></a>
+                <form method="POST" class="lowerButton">
+                    <input type="submit" class="customButton" value="Tak">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>VotePlus &copy; 2021</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+html, body {
+    height: auto;
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+}
+
+#container {
+    height: auto;
+    margin-bottom: -29px;
+}
+
+#logo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#logo img{
+    width: 150px;
+    height: 135px;
+}
+
+.panel_wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#panel {
+    width: 600px; 
+    margin: 0 auto; 
+    padding-top: 15px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 50px;
+    background: #fff;
+    border: 1px solid #006699;
+    font: 16px calibri;
+    letter-spacing: -1px;
+    -webkit-box-shadow: 0 0 2px #006699; 
+    -moz-box-shadow: 0 0 2px #006699; 
+    box-shadow: 0 0 2px #006699;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+}
+
+#message{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#sign_in{
+    width: 100px;
+    padding: 5px 13px;
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+    border: 1px solid #000099;
+    color: white;
+    text-shadow: 0 0 1px black;
+    background: #003399;
+    position: relative;
+    left: 220px;
+    top: 4px;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+}
+
+#lower {
+    background: #006699;
+    width: 560px;
+    height: 35px;
+    padding: 5px 20px;
+    margin-top: 30px;
+}
+
+#main_page:hover, #main_page:focus {
+    outline: none;
+    background-color: #000099;
+    border: 1px solid #000099;
+}
+
+#footer {
+    clear: both;
+    margin-top: 3%;
+    text-align: center;
+}
+
+#main_page {
+    margin: 0 auto;
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+    font-size: 12px;
+    width: auto;
+    height: auto;
+    padding: 5px 13px;
+    border: 1px solid #000099;
+    color: white;
+    text-shadow: 0 0 1px black;
+    background: #003399;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#footer p {
+    text-align: center;
+    color: #888888;
+    margin-top: 5px;
+}

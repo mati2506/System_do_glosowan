@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_usuniecia.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji">
+    </div>
+    <div class="panel_wrapper">
+        <form method="post">
+            <div id="panel">
+                <div id="message">
+                    {{info[1]}} <br><br>
+                    {{info[2]}} {{data[4]}} <br>
+                    {{info[3]}} {{data[0]}} {{data[1]}} <br>
+                    {{info[4]}} {{data[2]}} <br>
+                    {{info[5]}} {{data[3]}} <br>
+                    {{info[6]}} {{data[5]}} <br>
+                    {% if data[6] == None %}
+                    {{info[7]}} {{info[8]}} <br>
+                    {% else %}
+                    {{info[7]}} {{data[6]}} <br>
+                    {% endif %}
+                    <br>{{info[0]}}
+                </div>
+                <div id="lower">
+                    <a href="{{url_for('anuluj_usuniecie_uzytkownika')}}"><input type="button" id="no" value="Anuluj"></a>
+                    <input type="submit" id="yes" value="Usuń">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="footer">
+        <br>
+        <p>VotePlus &copy; 2021</p>
+        <br>
+    </div>
+</div>
+</body>
+</html>

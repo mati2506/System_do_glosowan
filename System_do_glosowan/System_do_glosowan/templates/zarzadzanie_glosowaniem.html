@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_zarzadzania_glosowaniem.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VotePlus</title>
+</head>
+<body>
+    <div id="container">
+        <div id="logo">
+            <img src="/static/images/logo.png" alt="Logo aplikacji">
+        </div>
+        <div class="panel_wrapper">
+            <div class="title">
+                {{info[0]}} <br>
+                {{info[1]}} {{data[0]}} <br>
+                {{info[2]}} {{data[2]}} <br>
+                {{info[3]}} {{data[1]}} <br>
+                {{info[4]}} {{data[3]}} <br>
+                {{info[5]}} {{data[4]}}
+            </div>
+            <div class="more">
+                <form method="get">
+                    <button type="submit" id="add1" formaction="{{url_for('edytuj_dane_glosowania')}}">Edytuj dane głosowania</button>
+                </form>
+            </div>
+            {% if if_not_active %}
+            <div class="more">
+                <form method="get">
+                    <button type="submit" id="add2" formaction="{{url_for('zarzadzaj_uczestnikami')}}">Zarządzaj uczestnikami głosowania</button>
+                </form>
+            </div>
+            <div id="vote_title">
+                {{info[6]}}
+            </div>
+            <div class="question_list">
+                <ul>
+                    {% for question_answers in questions %}
+                    {% set question = question_answers[0] %}
+                    {% set answers = question_answers[1] %}
+                    <li class="one_question">
+                        <div class="question">
+                            {{question[1]}}
+                        </div>
+                        <form method="POST" class="POST">
+                            <div class="edit">
+                                <button type="submit" class="edit_button" name="edit_question_id" value="{{question[0]}}">Edytuj</button>
+                                <button type="submit" class="delete_button" name="delete_question_id" value="{{question[0]}}">Usuń</button>
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                    <div class="answer_list">
+                        <ul>
+                            {% for answer in answers %}
+                            <li class="one_answer">
+                                <div class="answer">
+                                    {{answer[1]}}
+                                </div>
+                                <form method="POST" class="POST">
+                                    <div class="edit">
+                                        <input type="hidden" name="answer_question_id" value="{{question[0]}}">
+                                        <button type="submit" class="edit_button" name="edit_answer_id" value="{{answer[0]}}">Edytuj</button>
+                                        <button type="submit" class="delete_button" name="delete_answer_id" value="{{answer[0]}}">Usuń</button>
+                                    </div>
+                                </form>
+                            </li>
+                            {% else %}
+                            <li class="one_answer">
+                                <div class="answer">
+                                    {{info[7]}}
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <div class="more_answer">
+                            <form method="post">
+                                <button type="submit" class="add" name="question_id_for_add_answer" value="{{question[0]}}">Dodaj odpowiedź</button>
+                            </form>
+                        </div>
+                    </div>
+                    </li>
+                    {% else %}
+                    <li class="one_question">
+                        <div class="question">
+                            {{info[8]}}
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="new">
+                <a href="{{url_for('dodaj_pytanie')}}"><input type="button" class="add" value="Dodaj pytanie"></a>
+            </div>
+            {% endif %}
+        </div>
+        <div id="footer">
+            <br>
+            {% if site_type == 'Edycja' %}
+            <a href="{{url_for('zakonczenie_edycji_glosowania')}}"><input type="button" id="main_page" value="Zakończ edycję"></a>
+            {% else %}
+            <a href="{{url_for('zakonczenie_edycji_glosowania')}}"><input type="button" id="main_page" value="Zakończ dodawanie"></a>
+            {% endif %}
+            <p>VotePlus &copy; 2021</p>
+            <br>
+        </div>
+    </div>
+</body>
+</html>

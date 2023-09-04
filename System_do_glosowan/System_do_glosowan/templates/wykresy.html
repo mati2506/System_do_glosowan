@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<link rel="stylesheet" href="/static/content/style_wykresow.css">
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VotePlus</title>
+</head>
+<body>
+    <div id="container">
+        <div id="logo">
+            <img src="/static/images/logo.png" alt="Logo aplikacji">
+        </div> 
+        <div class="panel_wrapper">
+            <div id="title">
+                {{info[0]}} {{data[0]}} <br>
+                {{info[1]}} {{data[2]}} <br>
+                {{info[2]}} {{data[1]}} <br>
+                {{info[3]}} {{data[3]}} <br>
+                {{info[4]}} {{data[4]}} <br> <br>
+                {{info[5]}} {{authorized}}<br>
+                {{info[6]}} {{cast}}<br>
+                {{info[7]}} {{invalid}}
+            </div>
+            <div id="vote_title">
+                {{info[8]}}
+            </div>
+            <div class="box">
+                <div class="question_list">
+                    <ul>
+                        {% for question_answers in questions %}
+                        {% set question = question_answers[0] %}
+                        {% set answers = question_answers[1] %}
+                        {% set i = loop.index0 %}
+                        <li class="one_question">
+                            <div class="question">
+                                {{question[0]}}
+                            </div>
+                        </li>
+                        <li>
+                        <div class="answer_list">
+                            <ul>
+                                {% for answer in answers %}
+                                <li class="one_answer">
+                                    <div class="answer">
+                                        {{answer[0]}}
+                                    </div>
+                                    {% if data[1] == 'Jawne' %}
+                                    <form method="post" class="post">
+                                        <button type="submit" class="show_button" name="follow_id" value="{{answer[2]}}">Pokaż głosujących</button>
+                                    </form>
+                                    {% endif %}
+                                </li>
+                                {% else %}
+                                <li class="one_answer">
+                                    <div class="answer">
+                                        {{info[9]}}
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        </li>
+                        <li>
+                        <div class="picture">
+                            <img src="{{images[i]}}" alt="wykres">
+                        </div>
+                        </li>
+                        {% else %}
+                        <li class="one_question">
+                            <div class="question">
+                                {{info[10]}}
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>              
+            </div>
+            <form method="post">
+            <div id="buttons">
+                <input type="submit" class="csv" name="csv" value="Generuj raport csv">
+                <input type="submit" class="pdf" name="pdf" value="Generuj raport pdf">
+            </div>
+            </form>
+        </div>
+        <div id="footer">
+            <a href="{{url_for('zakoncz_wyniki_glosowania')}}"><input type="button" class="go" name="go" value="Wyjdź"></a>
+            <br>
+            <p>VotePlus &copy; 2021</p>
+            <br>
+        </div>
+    </div>
+</body>
+</html>

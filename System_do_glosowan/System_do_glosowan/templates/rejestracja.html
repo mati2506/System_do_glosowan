@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static\content/style_rejestracji.css">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+    <script src="/static/scripts/node_modules\sweetalert2/dist/sweetalert2.js"></script>
+    <link href="/static/scripts/node_modules\sweetalert2/dist/sweetalert2.css" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji" class="logo">
+    </div>
+    <div class="panel_wrapper">
+        <div class="panel">
+            <form method="post" name=registerForm onSubmit="return checkPassword(this)">
+                <table>
+                    <tr>
+                        <td class="left">
+                            <label for="username" class="label">{{info[0]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="text" id="username" class="formField" name="username" minlength=2 maxlength=100 onkeyup="charcountusername(this.value)" required>
+                        </td>
+                    </tr>
+                    <tr style="margin-top: -1vw; margin-bottom: -1vw">
+                        <td class="left">
+                        </td>
+                        <td class="right">
+                            <div id="counterUsername" class="counter"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="user_name" class="label">{{info[1]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="text" id="user_name" class="formField" name="user_name" minlength=2 maxlength=50 required onkeyup="charcountuser_name(this.value)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                        </td>
+                        <td class="right">
+                            <div id="counterUser_name" class="counter"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="user_surname" class="label">{{info[2]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="text" id="user_surname" class="formField" name="user_surname" minlength=2 maxlength=50 onkeyup="charcountusersurname(this.value)" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                        </td>
+                        <td class="right">
+                            <div id="counterUsersurname" class="counter"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="user_email" class="label">{{info[3]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="email" id="user_email" class="formField" name="user_email" size="64" maxLength="64" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="new_password" class="label">{{info[4]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="password" id="new_password" class="formField" name="new_password" minlength=8 maxlength=255 required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="new_password_repeat" class="label">{{info[5]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="password" id="new_password_repeat" class="formField" name="new_password_repeat" minlength=8 maxlength=255 required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="user_sex" class="label">{{info[6]}}</label>
+                        </td>
+                        <td class="right">
+                            <select id="user_sex" name="user_sex" class="formField1" required>
+                                <option selected></option>
+                                <option value="Kobieta">Kobieta</option>
+                                <option value="Mężczyzna">Mężczyzna</option>
+                                <option value="Inna">Inna</option>
+                                <option value="Nie chcę podawać">Nie chcę podawać</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="lata" class="label">{{info[7]}}</label>
+                        </td>
+                        <td class="right">
+                            <div id="lata"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="passwordComplexity" class="label">{{info[8]}}</label>
+                        </td>
+                        <td class="right">
+                            <progress id="passwordComplexity" value="0"></progress>
+                        </td>
+                    </tr>
+                </table>
+                <div id="lower">
+                    <a href="{{ url_for('logowanie') }}" class="lowerButton"><input type="button" class="customButton" id="log_in" value="Wróć do logowania"></a>
+                    <input type="submit" id="sign_in" class="customButton" value="Zarejestruj się">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        <a href="{{ url_for('strona_startowa') }}"><input type="button" id="main_page" value="Strona główna"></a>
+        <p>VotePlus &copy; 2021</p>
+    </div>
+</div>
+<script type="text/javascript" src="/static/scripts/scripts.js"></script>
+</body>
+</html>

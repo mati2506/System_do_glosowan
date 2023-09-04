@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_poprawnego.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">   
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji" width="150" height="135">
+    </div>
+    <div class="panel_wrapper">
+        <form method="post">
+            <div id="panel">
+                <div id="message">
+                    {% if site_type == 'kopiowanie_grupy' %}
+                    <label>{{info[0]}}<br>{{info[1]}}</label>
+                    {% else %}
+                    <label>{{info}}</label>
+                    {% endif %}
+                </div>
+                <div id="lower">
+                    {% if site_type == 'rejestracja' %}
+                    <a href="{{url_for('logowanie')}}"><input type="button" id="sign_in" value="Zaloguj się"></a>
+                    {% elif site_type == 'zmien_haslo' %}
+                    <a href="{{url_for('zalogowany')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                    {% elif site_type == 'aktywacja' %}
+                    <a href="{{url_for('zalogowany')}}"><input type="button" id="sign_in" value="Moje konto"></a>
+                    {% elif site_type == 'kopiowanie_grupy' %}
+                    <a href="{{url_for('zarzadzaj_uczestnikami')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                    {% endif %}
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="footer">
+        {% if site_type == 'rejestracja' %}
+    <a href="{{ url_for('strona_startowa') }}"><input type="button" id="main_page" value="Strona główna"></a>
+    {% endif %}
+    <p>VotePlus &copy; 2021</p>
+    </div>
+</div>
+</body>
+</html>

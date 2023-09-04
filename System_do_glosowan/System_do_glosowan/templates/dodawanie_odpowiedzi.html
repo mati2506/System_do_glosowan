@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_rejestracji.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji">
+    </div>
+    <div class="panel_wrapper">
+        <div class="info">
+            <p>{{info[0]}} {{name}}</p>
+        </div>
+        <div class="panel">
+            <form method="post">
+            <table>
+            <tr>
+                <td class="left">
+                    <label for="answer" class="login_label">{{info[1]}}</label>
+                </td>
+                <td class="right">
+                    <input type="text" id="answer" class="formField" name="answer" placeholder="{{info[2]}}" size="64" maxLength="200" required>
+                </td>
+            </tr>
+            </table>
+            <div id="lower">
+                <a href="{{ url_for('zarzadzaj_glosowaniem') }}" class="lowerButton"><input type="button" id="back" class="customButton" value="Anuluj"></a>
+                <input type="submit" id="next" class="customButton" value="Zatwierdź">
+            </div>
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        <p>VotePlus &copy; 2021</p>
+    </div>
+</div>
+</body>
+</html>

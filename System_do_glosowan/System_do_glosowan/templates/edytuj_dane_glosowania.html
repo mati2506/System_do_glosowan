@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_rejestracji.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+    <script src="/static/scripts/node_modules\sweetalert2/dist/sweetalert2.js"></script>
+    <link href="/static/scripts/node_modules\sweetalert2/dist/sweetalert2.css" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji" class="logo">
+    </div>
+    <div class="panel_wrapper">
+        <div class="info">
+            <br>
+            {{info[1]}}<br><br>
+            {{info[2]}} {{data[0]}}<br>
+            {{info[3]}} {{data[2]}}<br>
+            {{info[4]}} {{data[1]}}<br>
+            {{info[5]}} {{data[3]}}<br>
+            {{info[6]}} {{data[4]}}<br><br>
+            {{info[0]}}
+        </div>
+        <div class="panel">
+            <form method="post" onSubmit="return checkDates()">
+                <table>
+                    {% if if_not_active %}
+                    <tr>
+                        <td class="left">
+                            <label for="more" class="label">{{info[3]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="text" id="more" name="more" class="formField" minlength=2 maxlength=480>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="type" class="label">{{info[4]}}</label>
+                        </td>
+                        <td class="right">
+                            <select id="type" name="type" class="formField1">
+                                <option value="Wybierz typ">Wybierz typ</option>
+                                <option value="Niejawne">Niejawne</option>
+                                <option value="Jawne">Jawne</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="start_date" class="label">{{info[7]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="date" id=start_date class="datetime" name=start_date>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="start_time" class="label">{{info[8]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="time" id=start_time class="datetime" name=start_time>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    <tr>
+                        <td class="left">
+                            <label for="finish_date" class="label">{{info[9]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="date" id=finish_date class="datetime" name=finish_date>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="finish_time" class="label">{{info[10]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="time" id=finish_time class="datetime" name=finish_time>
+                        </td>
+                    </tr>
+                </table>
+                <div id="lower">
+                    <a href="{{url_for('zarzadzaj_glosowaniem')}}" class="lowerButton"><input type="button"
+                                                                                              class="customButton"
+                                                                                              value="Anuluj"></a>
+                    <input type="submit" class="customButton" value="Dalej">
+                </div>
+            </form>
+        </div>
+        <div id="footer">
+            <p>VotePlus &copy; 2021</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/static/scripts/scripts.js"></script>
+</body>
+</html>

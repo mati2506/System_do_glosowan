@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<link rel="stylesheet"  href="/static/content/style_rejestracji.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji">
+    </div>
+    <div class="panel_wrapper">
+        <div class="info">
+            {% if czy_pytanie %}
+            <p>{{info[0]}} {{pytanie}}</p>
+            {% else %}
+            <p>{{info[1]}} {{odpowiedz}} <br> {{info[2]}} {{pytanie}}</p>
+            {% endif %}
+        </div>
+        <div class="panel">
+            <form method="post">
+                <table>
+                    <tr>
+                        {% if czy_pytanie %}
+                        <td class="left">
+                            <label for="question" class="login_label">{{info[3]}}</label>
+                        </td>
+                        {% else %}
+                        <td class="left">
+                            <label for="question" class="login_label">{{info[4]}}</label>
+                        </td>
+                        {% endif %}
+                        <td class="right">
+                            <input type="text" id="question" class="formField" name="question" placeholder="{{info[5]}}" size="64" maxLength="200" required>
+                        </td>
+                    </tr>
+                </table>
+                <div id="lower">
+                    <a href="{{ url_for('zarzadzaj_glosowaniem') }}" class="lowerButton"><input type="button" id="back" class="customButton" value="Anuluj"></a>
+                    <input type="submit" id="next" class="customButton" value="Zatwierdź">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        <p>VotePlus &copy; 2021</p>
+    </div>
+</div>
+</body>
+</html>

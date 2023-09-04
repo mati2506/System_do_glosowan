@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_sledzenia.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji">
+    </div>
+    <div class="panel_wrapper">
+        <div class="title">
+            {{info[0]}} {{poll}}<br>
+            {{info[3]}} {{authorized}} <br>
+            {{info[1]}} {{cast}}<br>
+            {{info[2]}} {{invalid}}
+        </div>
+        <div id="vote_title">
+            {{info[4]}}
+        </div>
+        <div class="question_list">
+            <ul>
+                {% for question_answers in questions %}
+                {% set question = question_answers[0][0] %}
+                {% set answers = question_answers[1] %}
+                <li class="one_question">
+                    <div class="question">
+                        {{question}}
+                    </div>
+                    <div class="amount">
+                        {{info[5]}}
+                    </div>
+                </li>
+                    <div class="answer_list">
+                        <ul>
+                            {% for answer in answers %}
+                            <li class="one_answer">
+                                <div class="answer">
+                                    {{answer[0]}}
+                                </div>
+                                <div class="amount">
+                                    {{answer[1]}}
+                                </div>
+                            </li>
+                            {% else %}
+                            <li class="one_answer">
+                                <div class="answer">
+                                    {{info[6]}}
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% else %}
+                <li class="one_question">
+                    <div class="question">
+                        {{info[7]}}
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="footer">
+        <br>
+        <a href="{{url_for('zakoncz_sledzenie_glosowania')}}"><input type="button" id="main_page" value="Panel główny"></a>
+        <p>VotePlus &copy; 2021</p>
+        <br>
+        </div>
+    </div>
+</div>
+</body>
+</html>

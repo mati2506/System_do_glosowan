@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_dodawania_uczestnikow.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji">
+    </div>
+    <div class="panel_wrapper">
+        <div class="vote_list">
+            <div class="title">
+                {{info[0]}}
+            </div>
+            <form method="POST">
+                <div id="user">
+                    <input type="text" id="template" name="template" placeholder="{{info[3]}}">
+                    <div id="search_button">
+                        <input type="submit" value="Szukaj" id="search">
+                    </div>
+                </div>
+            </form>
+            <div class="title">
+                {{info[1]}}
+            </div>
+            <div class="users_list">
+                <ul>
+                    {% for poll in polls %}
+                    <li class="record">
+                        <div class="text">
+                            {{poll[1]}} {{poll[2]}}
+                        </div>
+                        <form method="POST">
+                            <div class="edit">
+                                {% if site_type == 'Edycja' %}
+                                <button type="submit" class="edit_button" name="edit_id" value="{{poll[0]}}">Edytuj</button>
+                                {% elif site_type == 'Usunięcie' %}
+                                {% if poll[2] > current_datetime %}
+                                <button type="submit" class="delete_button" name="delete_id" value="{{poll[0]}}">Usuń</button>
+                                {% else %}
+                                <button type="submit" class="delete_button" name="cancel_id" value="{{poll[0]}}">Unieważnij</button>
+                                {% endif %}
+                                {% else %}
+                                <button type="submit" class="edit_button" name="select_id" value="{{poll[0]}}">Wybierz</button>
+                                {% endif %}
+                            </div>
+                        </form>
+                    </li>
+                    {% else %}
+                    <li class="record">
+                        <div class="text">
+                            {{info[2]}}
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <br>
+        <a href="{{url_for('zalogowany')}}"><input type="button" id="main_page" value="Panel główny"></a>
+        <p>VotePlus &copy; 2021</p>
+        <br>
+    </div>
+</div>
+</body>
+</html>

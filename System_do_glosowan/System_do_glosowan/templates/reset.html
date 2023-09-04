@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_rejestracji.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji">
+    </div>
+    <div class="panel_wrapper">
+        <div class="info">
+            <p>{{info[0]}}</p>
+        </div>
+        <div class="panel">
+            <form method="post" name=registerForm onSubmit="return checkPassword(this)">
+                <table>
+                    <tr>
+                        <td class="left">
+                            <label for="reset_code" class="label">{{info[1]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="text" id="reset_code" class="formField" name="reset_code" placeholder="{{info[5]}}" minlength=2 maxlength=100 required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="new_password" class="label">{{info[2]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="password" id="new_password" name="new_password" class="formField" minlength=8 maxlength=255 required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="new_password_repeat" class="label">{{info[3]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="password" id="new_password_repeat" class="formField" name="new_password_repeat" minlength=8 maxlength=255 required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            <label for="passwordComplexity" class="label">{{info[4]}}</label>
+                        </td>
+                        <td class="right">
+                            <progress id="passwordComplexity" value="0"></progress>
+                        </td>
+                    </tr>
+                </table>
+                <div id="lower">
+                    <a href="{{ url_for('anulowanie_resetu_hasla') }}" class="lowerButton"><input type="button" id="cancel" class="customButton" value="Anuluj"></a>
+                    <input type="submit" id="log_in" class="customButton" value="Zmień hasło">
+                </div>
+                <script type="text/javascript" src="/static/scripts/scripts.js"></script>
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        <p>VotePlus &copy; 2021</p>
+    </div>
+</div>
+</body>
+</html>

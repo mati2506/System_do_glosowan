@@ -1,0 +1,245 @@
+html, body {
+    margin: auto;
+    height: auto;
+    width: auto;
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+}
+
+#container {
+    height: auto;
+}
+
+#logo {
+    margin-top: 1.5vw;
+    text-align: center
+}
+
+#logo img {
+    height: 10vw;
+    width: 11vw
+}
+
+.info {
+    color: #000;
+    font-size: 1.3vw;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    width: auto;
+    text-align: center
+}
+
+#message {
+    font-size: 20px;
+    text-align: center;
+    margin: 1.2vw auto 1.2vw auto;
+}
+
+.panel {
+    -moz-box-shadow: 0 0 0.1vw #069;
+    -webkit-box-shadow: 0 0 0.1vw #069;
+    background: #fff;
+    border: 0.045vw solid #069;
+    box-shadow: 0 0 0.1vw #069;
+    font-size: .9vw;
+    letter-spacing: -0.05vw;
+    margin: 2vw auto;
+    width: 45%;
+}
+
+.login_label {
+    display: block;
+    width: 100%;
+    margin: 1vw auto 1vw auto;
+    color: black;
+    text-align: center;
+    font-size: 1.2vw;
+    text-shadow: 0 0 0.045vw silver;
+}
+
+.label {
+    float: left;
+    margin: 0.7vw 1vw 0.7vw 1vw;
+    color: black;
+    font-size: 1.1vw;
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+    text-shadow: 0 0 1px silver;
+}
+
+#login_username, #password {
+    display: block;
+    width: 60%;
+    margin: 1vw auto 1vw auto;
+    padding: 0.5vw 0.8vw;
+    border: 0.045vw solid #069;
+    outline: 0.3vw solid #bfd6e2;
+    font-size: 1vw;
+}
+
+#reset {
+    text-align: center;
+    font-size: 1.1vw;
+}
+
+.formField, .formField1, .datetime {
+    width: 90%;
+    float: right;
+    border: 0.045vw solid #006699;
+    outline: 0.3vw solid #bfd6e2;
+    font-size: 1vw;
+    margin: 0.7vw 1.5vw 0.7vw auto;
+    height: 1.5vw;
+}
+
+.formField1 {
+    width: 91.2%;
+}
+
+.datetime {
+    width: 90.8%;
+}
+
+.formField:focus, .formField1:focus, .datetime:focus {
+    outline: 0.3vw solid #7e9dad;
+}
+
+
+#new_password, #new_password_repeat {
+    font-size: 1.2vw;
+}
+
+#passwordComplexity {
+    height: 1.2vw;
+    float: right;
+    width: 90%;
+    margin: 0.7vw 1.5vw 0.7vw auto;
+}
+
+#lower {
+    background: #069;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 3.5vw;
+}
+
+.customButton {
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+    background: #039;
+    border: 0.045vw solid #009;
+    color: #fff;
+    height: 1.75vw;
+    margin: auto 1vw;
+    text-align: center;
+    text-shadow: 0 0 0.045vw #000;
+    font-size: 0.875vw;
+    width: 9vw;
+    padding: 0;
+    -webkit-border-radius: 0.3vw;
+    -moz-border-radius: 0.3vw;
+    border-radius: 0.3vw
+}
+
+.customButton:hover {
+    outline: none;
+    background-color: #000099;
+    border: 0.045vw solid #000099;
+}
+
+
+.panel, #main_page {
+    -webkit-border-radius: 0.3vw;
+    -moz-border-radius: 0.3vw;
+    border-radius: 0.3vw;
+}
+
+#main_page {
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+    background: #039;
+    border: 0.045vw solid #009;
+    color: #fff;
+    font-size: .9vw;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0.3vw 0.55vw;
+    text-shadow: 0 0 0.045vw #000;
+    width: auto;
+}
+
+.lowerButton {
+    margin: auto 0
+}
+
+table {
+    width: 100%;
+}
+
+.left {
+    width: 30%;
+    color: black;
+    text-shadow: 0 0 0.045vw silver;
+}
+
+.right {
+    width: 70%;
+}
+
+.counter {
+    text-align: right;
+    margin-right: 2vw;
+    margin-top: -0.5vw;
+    margin-bottom: -1vw;
+    color: #9b9b9e;
+    font-size: 12px;
+}
+
+#footer {
+    display: block;
+    height: auto;
+    justify-content: center;
+    margin-top: 1.5vw;
+    width: auto;
+    text-align: center;
+}
+
+#footer p {
+    color: #888;
+    font-size: 0.97vw;
+    text-align: center
+}
+
+#user_list {
+    width: 100%;
+}
+
+#user_list ul {
+    list-style-type: none;
+    width: 90%;
+    padding: 0;
+    margin: 0.8vw 2vw 0.7vw 1.5vw;
+
+}
+
+.record {
+    background-color: #e8eaf6;
+    height: 27px;
+    margin-top: 3px;
+    padding: 5px;
+    width: 100%;
+
+}
+
+.text {
+    float: left;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.edit {
+    float: right;
+}

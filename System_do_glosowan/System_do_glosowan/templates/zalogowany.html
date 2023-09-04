@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_zalogowanego.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji">
+    </div>
+    <div id="top">
+        {{info[9]}} {{name[0]}} {{name[1]}} ({{name[2]}})
+    </div>
+    {% if user_type != 0 %}
+    <div id="vote_list">
+        <div id="title">
+            {{info[10]}}
+        </div>
+        <ul>
+            {% for poll in polls %}
+            <li class="vote">
+                <div class="text">
+                    {{poll[1]}} <br> {{info[11]}} {{poll[2]}}
+                </div>
+                <div class="go">
+                    <form method="post">
+                        <button type="submit" class="next" name="choose_poll" value="{{poll[0]}}">Głosuj!</button>
+                    </form>
+                </div>
+            </li>
+            {% else %}
+            <li class="vote">
+                <div class="text">
+                    {{info[12]}} <br> {{info[13]}}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    <div class="panel_wrapper">
+        {% if user_type != 1 %}
+        <div id="panel">
+            <div id="column_1">
+                <div class=picture>
+                    <img src="/static/images/utworz.png" alt="Obrazek tworzenia">
+                </div>
+                <div class=small_title>
+                    {{info[14]}}
+                </div>
+                <div class="info">
+                    {{info[1]}}
+                </div>
+                <div class=buttons>
+                    <a href="{{url_for('utworz_glosowanie')}}"><input type="button" id="make_new_vote" value="Utwórz głosowanie"></a>
+                </div>
+            </div>
+            <div id="column_2">
+                <div class=picture>
+                    <img src="/static/images/edytuj.png" alt="Obrazek edycji głosowania">
+                </div>
+                <div class=small_title>
+                    {{info[15]}}
+                </div>
+                <div class="info">
+                    {{info[2]}}
+                </div>
+                <div class=buttons>
+                    <a href="{{url_for('glosowanie_do_edycji')}}"><input type="button" id="edit_vote" value="Edytuj głosowanie"></a>
+                </div>
+            </div>
+            <div id="column_3">
+                <div class=picture>
+                    <img src="/static/images/sledz.png" alt="Obrazek śledzenia głosowania">
+                </div>
+                <div class=small_title>
+                    {{info[16]}}
+                </div>
+                <div class="info">
+                    {{info[3]}}
+                </div>
+                <div class=buttons>
+                    <a href="{{url_for('glosowanie_do_sledzenia')}}"><input type="button" id="follow_vote" value="Śledź głosowanie"></a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if user_type == 0 %}
+        <div id="panel_1">
+            <div id="column_4">
+                <div class=picture>
+                    <img src="/static/images/kontakt.png" alt="Obrazek informacji">
+                </div>
+                <div class=small_title>
+                    {{info[17]}}
+                </div>
+                <div class="info">
+                    {{info[6]}}
+                </div>
+                <div class=buttons>
+                    <a href="{{url_for('wybierz_uzytkownika')}}"><input type="button" id="edit_users" value="Zarządzaj użytkownikami"></a>
+                </div>
+            </div>
+            <div id="column_5">
+                <div class=picture>
+                    <img src="/static/images/kosz.png" alt="Obrazek usuwania głosowania">
+                </div>
+                <div class=small_title>
+                    {{info[18]}}
+                </div>
+                <div class="info">
+                    {{info[7]}}
+                </div>
+                <div class=buttons>
+                    <a href="{{url_for('glosowanie_do_usuniecia')}}"><input type="button" id="delete_vote" value="Zarządzaj głosowaniem"></a>
+                </div>
+            </div>
+            <div id="column_6">
+                <div class=picture>
+                    <img src="/static/images/info.png" alt="Obrazek informacji">
+                </div>
+                <div class=small_title>
+                    {{info[19]}}
+                </div>
+                <div class="info">
+                    {{info[8]}}
+                </div>
+                <div class=buttons>
+                    <a href="{{url_for('informacje_o_systemie')}}"><input type="button" id="check_system" value="Informacje o systemie"></a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        <div id="panel_2">
+            <div id="column_7">
+                <div class=picture>
+                    <img src="/static/images/wyniki.png" alt="Obrazek informacji">
+                </div>
+                <div class=small_title>
+                    {{info[20]}}
+                </div>
+                <div class="info">
+                    {{info[0]}}
+                </div>
+                <div class=buttons>
+                    <a href="{{url_for('glosowanie_do_wynikow')}}"><input type="button" id="check_results" value="Wyniki i statystyki"></a>
+                </div>
+            </div>
+            <div id="column_8">
+                <div class=picture>
+                    <img src="/static/images/haslo.png" alt="Obrazek zmiany hasła">
+                </div>
+                <div class=small_title>
+                    {{info[21]}}
+                </div>
+                <div class="info">
+                    {{info[4]}}
+                </div>
+                <div class=buttons>
+                    <a href="{{url_for('zmien_haslo')}}"><input type="button" id="edit_password" value="Zmień hasło"></a>
+                </div>
+            </div>
+            <div id="column_9">
+                <div class=picture>
+                    <img src="/static/images/wyloguj.png" alt="Obrazek wyloggowania">
+                </div>
+                <div class=small_title>
+                    {{info[22]}}
+                </div>
+                <div class="info">
+                    {{info[5]}}
+                </div>
+                <div class=buttons>
+                    <a href="{{url_for('wyloguj')}}"><input type="button" id="log_out" value="Wyloguj się"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <br>
+        <a href="{{url_for('strona_startowa')}}"><input type="button" id="main_page" value="Strona główna"></a>
+        <p>VotePlus &copy; 2021</p>
+        <br>
+    </div>
+</div>
+</body>
+</html>

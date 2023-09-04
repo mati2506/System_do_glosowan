@@ -1,0 +1,428 @@
+html, body {
+    height: auto;
+    text-align: center;
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+}
+
+#container {
+    height: auto;
+    margin-bottom: -29px;
+}
+
+#logo{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#logo img{
+    width: 150px;
+    height: 135px;
+}
+
+.panel_wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#title{
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+#vote_title{
+    margin-top: 35px;
+    font-size: 18px;
+}
+
+.box{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.question_list{
+    margin-top: 5px;
+    margin: auto;
+    width: 60%;
+}
+
+.answer_list{
+    margin-top: 5px;
+    margin: auto;
+    width: 90%;
+}
+
+.question_list ul, .answer_list ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.one_question{
+    background-color: #e8eaf6;
+    height: auto;
+    padding: 5px;
+    margin-top: 15px;
+	align-items: center;
+}
+
+.one_answer{
+    background-color: #e8eaf6;
+    height: auto;
+    padding: 5px;
+    margin-top: 5px;
+    align-items: center;
+    display: flex;
+}
+
+.question{
+    padding: 5px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.answer{
+    padding: 5px;
+    font-size: 15px;
+    text-align: left;
+    width: 85%
+}
+
+.post{
+    text-align: right;
+    width: 15%;
+}
+
+.title{
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.picture{
+    margin-top: 5px;
+}
+
+.show_button{
+    width: auto;
+    height: auto;
+    padding: 5px 13px;
+    border: 1px solid #0099cc;
+    color: white;
+    text-shadow: 0 0 1px black;
+    background: #3399cc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+}
+
+#buttons{
+    margin-top: 35px;
+}
+
+.csv, .pdf {
+    width: auto;
+    height: auto;
+    padding: 5px 13px;
+    border: 1px solid #0099cc;
+    color: white;
+    text-shadow: 0 0 1px black;
+    background: #3399cc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+}
+
+.csv:hover, .csv:focus .pdf:hover, .pdf:focus{
+    outline: none;
+    background-color: #006699;
+    border: 1px solid #006699;
+}
+
+#won{
+    margin-top: 25px;
+}
+
+.go{
+    width: auto;
+    height: auto;
+    padding: 5px 13px;
+    border: 1px solid #000099;
+    color: white;
+    text-shadow: 0 0 1px black;
+    background: #003399;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+}
+
+.go:hover, .go:focus
+{
+    outline: none;
+    background-color: #000099;
+    border: 1px solid #000099;
+}
+
+#footer {
+    clear: both;
+    margin-top: 3%;
+}
+
+#footer p {
+    text-align: center;
+    color: #888888;
+    margin-top: 5px;
+}
+
+@media all and (min-width: 280px) and (max-width: 500px){
+
+    #logo {
+        margin-top: 30px;
+    }
+    
+    #logo img{
+        width: 75px;
+        height: 60px;
+    }
+
+    #title{
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    #vote_title{
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    
+    .question_list{
+        margin-top: 2px;
+        width: 100%;
+    }
+    
+    .answer_list{
+        margin-top: 2px;
+        width: 95%;
+    }
+    
+    .one_question{
+        margin-top: 10px;
+    }
+    
+    .question{
+        padding: 2px;
+        font-size: 11px;
+    }
+    
+    .answer{
+        padding: 2px;
+        font-size: 11px;
+        width: 75%
+    }
+    
+    .post{
+        width: 25%;
+    }
+
+    .show_button{
+        font-size: 8px; 
+        padding: 5px 7px;
+    }
+
+    .picture{
+        margin-top: 0px;
+    }
+
+    .picture img{
+        width: 270px;
+        height: auto;
+    }
+
+    #buttons{
+        margin-top: 15px;
+    }
+
+    .csv, .pdf, .go{
+        font-size: 10px; 
+    }
+
+    #footer p {
+        font-size: 12px;
+    }
+}
+
+@media all and (min-width: 501px) and (max-width: 768px){
+
+    #logo {
+        margin-top: 30px;
+    }
+    
+    #logo img{
+        width: 140px;
+        height: 120px;
+    }
+
+    #title{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
+    #vote_title{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
+    .question_list{
+        margin-top: 2px;
+        width: 95%;
+    }
+    
+    .answer_list{
+        margin-top: 2px;
+        width: 95%;
+    }
+    
+    .one_question{
+        margin-top: 10px;
+    }
+    
+    .question{
+        padding: 2px;
+        font-size: 12px;
+    }
+    
+    .answer{
+        padding: 2px;
+        font-size: 12px;
+        width: 75%
+    }
+    
+    .post{
+        width: 25%;
+    }
+
+    .show_button{
+        font-size: 10px; 
+        padding: 5px 7px;
+    }
+
+    .picture img{
+        width: 380px;
+        height: auto;
+    }
+    
+    #footer p {
+        font-size: 14px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1000px){
+    #logo {
+        margin-top: 30px;
+    }
+
+    #title{
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    
+    #vote_title{
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    
+    .question_list{
+        margin-top: 2px;
+        width: 95%;
+    }
+    
+    .answer_list{
+        margin-top: 2px;
+        width: 95%;
+    }
+    
+    .one_question{
+        margin-top: 10px;
+    }
+    
+    .question{
+        padding: 2px;
+        font-size: 14px;
+    }
+    
+    .answer{
+        padding: 2px;
+        font-size: 14px;
+        width: 80%
+    }
+    
+    .post{
+        width: 20%;
+    }
+
+    .show_button{
+        font-size: 12px; 
+        padding: 5px 12px;
+    }
+
+    .picture img{
+        width: 380px;
+        height: auto;
+    }
+    
+    #footer p {
+        font-size: 14px;
+    }
+}
+
+@media all and (min-width: 1001px) and (max-width: 1460px){
+    .title{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    
+    #vote_title{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    
+    .question_list{
+        margin-top: 2px;
+        width: 85%;
+    }
+    
+    .answer_list{
+        margin-top: 2px;
+        width: 90%;
+    }
+    
+    .question{
+        font-size: 16px;
+    }
+
+    .answer{
+        font-size: 16px;
+        width: 79%
+    }
+    
+    .post{
+        width: 21%;
+    }
+
+    .picture img{
+        width: 420px;
+        height: auto;
+    }
+    
+    #footer p {
+        font-size: 17px;
+    }
+}

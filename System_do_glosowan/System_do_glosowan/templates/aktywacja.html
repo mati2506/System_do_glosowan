@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_rejestracji.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji" class="logo">
+    </div>
+    <div class="panel_wrapper">
+        <div class="info">
+            <p>{{info[0]}}</p>
+        </div>
+
+        <div class="panel" style="width: 35%">
+            <form method="post" name=registerForm onSubmit="return checkPassword(this)">
+                <table>
+                    <tr>
+                        <td class="left">
+                            <label for="act_code" class="label">{{info[1]}}</label>
+                        </td>
+                        <td class="right">
+                            <input type="text" id="act_code" name="act_code" class="formField" minlength=10 maxlength=10 required>
+                        </td>
+                    </tr>
+                </table>
+                <div id="lower">
+                    <a href="{{ url_for('wyloguj') }}" class="lowerButton"><input type="button" class="customButton" value="Wyloguj"></a>
+                    <input type="submit" class="customButton" value="Potwierdź">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        <a href="{{ url_for('strona_startowa') }}"><input type="button" id="main_page" value="Strona główna"></a>
+        <p>VotePlus &copy; 2021</p>
+    </div>
+</div>
+</body>
+</html>

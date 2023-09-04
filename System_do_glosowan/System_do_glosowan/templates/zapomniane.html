@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_rejestracji.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji" width="150" height="135">
+    </div>
+    <div class="panel_wrapper">
+        <form method="post">
+            <div class="panel">
+                <label for="user_email" class="login_label">{{info[0]}}</label>
+                <input type="email" id="user_email" class="formField" name="user_email" placeholder="{{info[1]}}" size="64" maxLength="64" required>
+                <div id="lower">
+                    <a href="{{ url_for('logowanie') }}" class="lowerButton"><input type="button" id="back" class="customButton" value="Powrót"></a>
+                    <input type="submit" id="next" class="customButton" value="Dalej">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="footer">
+        <a href="{{ url_for('strona_startowa') }}"><input type="button" id="main_page" value="Strona główna"></a>
+        <p>VotePlus &copy; 2021</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_niepoprawnego.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji">
+    </div>
+    <div class="panel_wrapper">
+        <form method="post">
+            <div id="panel">
+                <div id="message">
+                    {% if site_type == 'błąd_serwera' %}
+                    <label>{{info[0]}}</label><br>
+                    <label>{{info[1]}}</label><br><br>
+                    <label>{{info[2]}}</label>
+                    {% else %}
+                    <label>{{info}}</label>
+                    {% endif %}
+                </div>
+                <div id="lower">
+                    <div class="buttons">
+                        {% if site_type == 'zmien_haslo' %}
+                        {% if change_type == 'zmiana' %}
+                        <a href="{{url_for('zalogowany')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                        {% elif change_type == 'reset' %}
+                        <a href="{{url_for('logowanie')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                        {% endif %}
+                        {% elif site_type == 'rejestracja' %}
+                        <a href="{{url_for('rejestracja')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                        {% elif site_type == 'logowanie' %}
+                        <a href="{{url_for('logowanie')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                        {% elif site_type == 'aktywacja' %}
+                        <a href="{{url_for('logowanie')}}"><input type="button" id="sign_in" value="Zaloguj"></a>
+                        {% elif site_type == 'zmiana_danych_głosowania' %}
+                        <a href="{{url_for('edytuj_dane_glosowania')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                        {% elif site_type == 'oddanie_głosu' %}
+                        <a href="{{url_for('zalogowany')}}"><input type="button" id="sign_in" value="Moje konto"></a>
+                        {% elif site_type == 'edycja_głosowania' %}
+                        {% if error_type == 'pytania_odpowiedzi' %}
+                        <a href="{{url_for('zarzadzaj_glosowaniem')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                        {% else %}
+                        <a href="{{url_for('zarzadzaj_uczestnikami')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                        {% endif %}
+                        {% elif site_type == 'błąd_serwera' %}
+                        <a href="{{url_for('strona_startowa')}}"><input type="button" id="sign_in" value="Strona główna"></a>
+                        {% elif site_type == 'dodanie_pytania' %}
+                        <a href="{{url_for('dodaj_pytanie')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                        {% elif site_type == 'edycja_pytania' %}
+                        <a href="{{url_for('edytuj_pytanie')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                        {% elif site_type == 'dodanie_odpowiedzi' %}
+                        <a href="{{url_for('dodaj_odpowiedz')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                        {% elif site_type == 'edycja_odpowiedzi' %}
+                        <a href="{{url_for('edytuj_odpowiedz')}}"><input type="button" id="sign_in" value="Powrót"></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="footer">
+        {% if site_type in ['rejestracja', 'logowanie', 'aktywacja'] or change_type == 'reset' %}
+        <a href="{{ url_for('strona_startowa') }}"><input type="button" id="main_page" value="Strona główna"></a>
+        <br>
+        {% endif %}
+        <p>VotePlus &copy; 2021</p>
+    </div>
+</div>
+</body>
+</html>

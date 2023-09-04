@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_informacji.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji">
+    </div>
+    <div class="panel_wrapper">
+        <div id="panel">
+            <div id="column_1">
+                <div class=picture>
+                    <img src="/static/images/utworz.png" alt="Obrazek informacji">
+                </div>
+                <div class=title>
+                    {{info[4]}}
+                </div>
+                <div id="votes">
+                    {{info[0]}}
+                    <br>
+                    <br>
+                    {{info[1]}}
+                </div>
+            </div>
+            <div id="column_2">
+                <div class=picture>
+                    <img src="/static/images/kontakt.png" alt="Obrazek kontaktu">
+                </div>
+                <div class=title>
+                    {{info[5]}}
+                </div>
+                <div id="users">
+                    {{info[2]}}
+                    <br>
+                    <br>
+                    {{info[3]}}
+                    <br>
+                    <a href="{{url_for('usun_nieaktywnych')}}"><input type="button" id="delete" value="Usuń nieaktywne konta"></a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <br>
+            <a href="{{url_for('zalogowany')}}"><input type="button" id="main_page" value="Panel główny"></a>
+            <p>VotePlus &copy; 2021</p>
+            <br>
+        </div>
+    </div>
+</div>
+</body>
+</html>

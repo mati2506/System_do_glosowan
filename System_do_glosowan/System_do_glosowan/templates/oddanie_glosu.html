@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_oddania_glosu.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VotePlus</title>
+</head>
+<body>
+    <div id="container">
+        <div id="logo">
+            <img src="/static/images/logo.png" alt="Logo aplikacji">
+        </div>
+        <div class="panel_wrapper">
+            <div class="title">
+                {{info[1]}} <br>
+                Tytuł: {{data[0]}} <br>
+                Opis: {{data[2]}} <br>
+                Typ: {{data[1]}}
+            </div>
+            <div id="vote_title">
+                {{info[0]}}
+            </div>
+            <form method="post">
+            <div class="question_list">
+                <ul>
+                    {% for question_answers in questions %}
+                    {% set question = question_answers[0] %}
+                    {% set answers = question_answers[1] %}
+                    <li class="one_question">
+                        <div class="question">
+                            {{question[1]}}
+                        </div>
+                        {% set pnr = loop.index0 %}
+                    </li>
+                    <li>
+                    <div class="answer_list">
+                        <ul>
+                            {% for answer in answers %}
+                            <li class="one_answer">
+                                <div class="answer">
+                                    <div class="check">
+                                        <input type="radio" name="{{pnr}}" value="{{answer[0]}}" required>
+                                    </div>
+                                    <div class="desc">
+                                        {{answer[1]}}
+                                    </div>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div id="buttons">
+                <a href="{{url_for('opuszczenie_glosowania')}}"><input type="button" class="delete" name="delete" value="Wyjdź"></a>
+                <input type="submit" class="exit" name="exit" value="Zakończ i wyślij">               
+            </div>
+            </form>
+        </div>
+        <div id="footer">
+            <p>VotePlus &copy; 2021</p>
+            <br>
+        </div>
+    </div>
+</body>
+</html>

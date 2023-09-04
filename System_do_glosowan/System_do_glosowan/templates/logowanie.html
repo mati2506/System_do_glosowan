@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_rejestracji.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji" width="150" height="135">
+    </div>
+    <div class="panel_wrapper">
+        <form method="post">
+        <div class="panel">
+            <label for="login_username" class="login_label">{{info[0]}}</label>
+            <input type="text" id="login_username" name="username">
+            <label for="password" class="login_label">{{info[1]}}</label>
+            <input type="password" id="password" name="password">
+            <p id="reset"><a href="{{url_for('zapomniane_haslo')}}">{{info[2]}}</a></p>
+            <div id="lower">
+                <a href="{{url_for('rejestracja')}}" class="lowerButton"><input type="button" id="sign_in" class="customButton" value="Zarejestruj się"></a>
+                <input type="submit" id="log_in" class="customButton" value="Zaloguj się">
+            </div>
+        </div>
+        </form>
+    </div>
+    <div id="footer">
+        <a href="{{ url_for('strona_startowa') }}"><input type="button" id="main_page" value="Strona główna"></a>
+        <p>VotePlus &copy; 2021</p>
+    </div>
+</div>
+</body>
+</html>

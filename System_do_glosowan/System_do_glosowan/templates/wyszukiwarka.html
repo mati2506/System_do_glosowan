@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/content/style_wyszukiwarki.css">
+<link rel="icon" type="image/png" href="/static/images/favicon.ico">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VotePlus</title>
+</head>
+<body>
+<div id="container">
+    <div id="logo">
+        <img src="/static/images/logo.png" alt="Logo aplikacji">
+    </div>
+    <div class="panel_wrapper">
+        <div id="user_list">
+            <div class="title">
+                {{info[0]}}
+            </div>
+            <form method="POST">
+                <div id="user">
+                    <input type="text" id="template" name="template" placeholder="{{info[2]}}">
+                    <div id="search_button">
+                        <input type="submit" value="Szukaj" id="search">
+                    </div>
+                </div>
+            </form>
+            <div class="users_list">
+                <ul>
+                    {% for user in users %}
+                    <li class="record">
+                        <div class="text">
+                            {{user[1]}} ({{user[2]}})
+                        </div>                  
+                        <form method="POST">
+                            <div class="buttons">
+                                <button type="submit" class="edit_button" name="edit_pid" value="{{user[0]}}">Edytuj</button>
+                                <button type="submit" class="delete_button" name="delete_pid" value="{{user[0]}}">Usuń</button>
+                            </div>
+                        </form>
+                    </li>
+                    {% else %}
+                    <li class="record">
+                        <div class="text">
+                            {{info[1]}}
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <br>
+        <a href="{{url_for('zalogowany')}}"><input type="button" id="main_page" value="Panel główny"></a>
+        <p>VotePlus &copy; 2021</p>
+        <br>
+    </div>
+</div>
+</body>
+</html>

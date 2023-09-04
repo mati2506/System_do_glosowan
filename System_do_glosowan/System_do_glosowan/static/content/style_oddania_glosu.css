@@ -1,0 +1,428 @@
+html, body {
+    height: auto;
+    text-align: center;
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+}
+
+#container {
+    height: auto;
+    margin-bottom: -29px;
+}
+
+#logo {
+    margin-top: 50px;
+}
+
+#logo img{
+    width: 150px;
+    height: 135px;
+}
+
+.panel_wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+#vote_title{
+    width: 85%;
+    margin: auto;
+    margin-top: 35px;
+    font-size: 16px;
+}
+
+.question_list{
+    margin: auto;
+    margin-top: 15px;
+    width: 60%;
+}
+
+.answer_list{
+    margin: auto;
+    margin-top: 5px;
+    width: 90%;
+}
+
+.question_list ul, .answer_list ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.one_question{
+    background-color: #e8eaf6;
+    height: auto;
+    padding: 5px;
+    margin-top: 15px;
+	align-items: center;
+}
+
+.one_answer{
+    background-color: #e8eaf6;
+    height: auto;
+    padding: 5px;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.question{
+    padding: 5px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.answer{
+    padding: 5px;
+    font-size: 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.check{
+    width: 3%;
+}
+
+.desc{
+    width: 97%
+}
+
+.exit {
+    width: 130px;
+    height: auto;
+    padding: 5px 13px;
+    border: 1px solid #0099cc;
+    color: white;
+    text-shadow: 0 0 1px black;
+    background: #3399cc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+}
+
+.delete{
+    width: 130px;
+    height: auto;
+    padding: 5px 13px;
+    border: 1px solid #546e7a;
+    color: white;
+    text-shadow: 0 0 1px black;
+    background: #607d8b;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+    font-family: Trebuchet MS, sans-serif;
+    font-style: italic;
+}
+
+.exit:hover, .exit:focus{
+    outline: none;
+    background-color: #006699;
+    border: 1px solid #006699;
+}
+
+.delete:hover, .delete:focus{
+    outline: none;
+    background-color: #37474f;
+    border: 1px solid #37474f;
+}
+
+#footer {
+    clear: both;
+    margin-top: 2%;
+}
+
+#footer p {
+    text-align: center;
+    color: #888888;
+    margin-top: 5px;
+}
+
+@media all and (max-width: 320px){
+
+    #logo {
+        margin-top: 30px;
+    }
+    
+    #logo img{
+        width: 75px;
+        height: 60px;
+    }
+
+    .title{
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    #vote_title{
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    
+    .question_list{
+        margin-top: 2px;
+        width: 100%;
+    }
+    
+    .answer_list{
+        margin-top: 2px;
+        width: 95%;
+    }
+    
+    .one_question{
+        margin-top: 10px;
+    }
+    
+    .question{
+        padding: 2px;
+        font-size: 11px;
+    }
+    
+    .answer{
+        padding: 2px;
+        font-size: 11px;
+    }
+
+    .check{
+        width: 10%;
+    }
+    
+    .desc{
+        width: 90%
+    }
+
+    .exit{
+        width: 100px;
+        font-size: 10px; 
+    }
+
+    .delete{
+        width: 100px;
+        font-size: 10px; 
+    }
+
+    #footer p {
+        font-size: 12px;
+    }
+}
+
+@media all and (min-width: 321px) and (max-width: 500px){
+
+    #logo {
+        margin-top: 30px;
+    }
+    
+    #logo img{
+        width: 75px;
+        height: 60px;
+    }
+
+    .title{
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    #vote_title{
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    
+    .question_list{
+        margin-top: 2px;
+        width: 100%;
+    }
+    
+    .answer_list{
+        margin-top: 2px;
+        width: 95%;
+    }
+    
+    .one_question{
+        margin-top: 10px;
+    }
+    
+    .question{
+        padding: 2px;
+        font-size: 11px;
+    }
+    
+    .answer{
+        padding: 2px;
+        font-size: 11px;
+    }
+
+    .check{
+        width: 7%;
+    }
+    
+    .desc{
+        width: 93%
+    }
+
+    .exit{
+        width: 100px;
+        font-size: 10px; 
+    }
+
+    .delete{
+        width: 100px;
+        font-size: 10px; 
+    }
+
+    #footer p {
+        font-size: 12px;
+    }
+}
+
+@media all and (min-width: 501px) and (max-width: 767px){
+
+    #logo {
+        margin-top: 30px;
+    }
+    
+    #logo img{
+        width: 140px;
+        height: 120px;
+    }
+
+    .title{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
+    #vote_title{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
+    .question_list{
+        margin-top: 2px;
+        width: 95%;
+    }
+    
+    .answer_list{
+        margin-top: 2px;
+        width: 95%;
+    }
+    
+    .one_question{
+        margin-top: 10px;
+    }
+    
+    .question{
+        padding: 2px;
+        font-size: 12px;
+    }
+    
+    .answer{
+        padding: 2px;
+        font-size: 12px;
+    }
+
+    .check{
+        width: 5%;
+    }
+    
+    .desc{
+        width: 95%
+    }
+    
+    #footer p {
+        font-size: 14px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1000px){
+    #logo {
+        margin-top: 30px;
+    }
+
+    .title{
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    
+    #vote_title{
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    
+    .question_list{
+        margin-top: 2px;
+        width: 95%;
+    }
+    
+    .answer_list{
+        margin-top: 2px;
+        width: 95%;
+    }
+    
+    .one_question{
+        margin-top: 10px;
+    }
+    
+    .question{
+        padding: 2px;
+        font-size: 14px;
+    }
+    
+    .answer{
+        padding: 2px;
+        font-size: 14px;
+    }
+
+    .check{
+        width: 4%;
+    }
+    
+    .desc{
+        width: 96%
+    }
+    
+    #footer p {
+        font-size: 14px;
+    }
+}
+
+@media all and (min-width: 1001px) and (max-width: 1380px){
+    .title{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    
+    #vote_title{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    
+    .question_list{
+        margin-top: 2px;
+        width: 85%;
+    }
+    
+    .answer_list{
+        margin-top: 2px;
+        width: 90%;
+    }
+    
+    .question{
+        font-size: 16px;
+    }
+    
+    .answer{
+        font-size: 16px;
+    }
+    
+    #footer p {
+        font-size: 17px;
+    }
+}

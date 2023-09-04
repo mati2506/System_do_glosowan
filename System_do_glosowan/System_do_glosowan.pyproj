@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>bf8accd5-aa1b-4e3a-80be-2475c9e44d20</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <Name>System_do_glosowan</Name>
+    <RootNamespace>System_do_glosowan</RootNamespace>
+    <InterpreterId>Global|ContinuumAnalytics|Anaconda37-64</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="runserver.py" />
+    <Compile Include="System_do_glosowan\fun.py" />
+    <Compile Include="System_do_glosowan\fun_base.py" />
+    <Compile Include="System_do_glosowan\fun_mail.py" />
+    <Compile Include="System_do_glosowan\message.py" />
+    <Compile Include="System_do_glosowan\__init__.py" />
+    <Compile Include="System_do_glosowan\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System_do_glosowan\" />
+    <Folder Include="System_do_glosowan\static\" />
+    <Folder Include="System_do_glosowan\static\content\" />
+    <Folder Include="System_do_glosowan\static\fonts\" />
+    <Folder Include="System_do_glosowan\static\images\" />
+    <Folder Include="System_do_glosowan\static\scripts\" />
+    <Folder Include="System_do_glosowan\static\scripts\node_modules\" />
+    <Folder Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\" />
+    <Folder Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\dist\" />
+    <Folder Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\" />
+    <Folder Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\" />
+    <Folder Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\scss\" />
+    <Folder Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\staticMethods\" />
+    <Folder Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\" />
+    <Folder Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\" />
+    <Folder Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\" />
+    <Folder Include="System_do_glosowan\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="System_do_glosowan\static\content\style_dodawania_uczestnikow.css" />
+    <Content Include="System_do_glosowan\static\content\style_edycji.css" />
+    <Content Include="System_do_glosowan\static\content\style_informacji.css" />
+    <Content Include="System_do_glosowan\static\content\style_niepoprawnego.css" />
+    <Content Include="System_do_glosowan\static\content\style_oddania_glosu.css" />
+    <Content Include="System_do_glosowan\static\content\style_poprawnego.css" />
+    <Content Include="System_do_glosowan\static\content\style_rejestracji.css" />
+    <Content Include="System_do_glosowan\static\content\style_sledzenia.css" />
+    <Content Include="System_do_glosowan\static\content\style_strony_startowej.css" />
+    <Content Include="System_do_glosowan\static\content\style_tworzenia_glosowania.css" />
+    <Content Include="System_do_glosowan\static\content\style_usuniecia.css" />
+    <Content Include="System_do_glosowan\static\content\style_usuniecia_glosowania.css" />
+    <Content Include="System_do_glosowan\static\content\style_wykresow.css" />
+    <Content Include="System_do_glosowan\static\content\style_wyszukiwarki.css" />
+    <Content Include="System_do_glosowan\static\content\style_zalogowanego.css" />
+    <Content Include="System_do_glosowan\static\content\style_zapomnianego.css" />
+    <Content Include="System_do_glosowan\static\content\style_zarzadzania_glosowaniem.css" />
+    <Content Include="System_do_glosowan\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="System_do_glosowan\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="System_do_glosowan\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="System_do_glosowan\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="System_do_glosowan\static\images\edytuj.png" />
+    <Content Include="System_do_glosowan\static\images\favicon.ico" />
+    <Content Include="System_do_glosowan\static\images\go.png" />
+    <Content Include="System_do_glosowan\static\images\haslo.png" />
+    <Content Include="System_do_glosowan\static\images\info.png" />
+    <Content Include="System_do_glosowan\static\images\kontakt.png" />
+    <Content Include="System_do_glosowan\static\images\kosz.png" />
+    <Content Include="System_do_glosowan\static\images\logo.png" />
+    <Content Include="System_do_glosowan\static\images\sledz.png" />
+    <Content Include="System_do_glosowan\static\images\utworz.png" />
+    <Content Include="System_do_glosowan\static\images\wyloguj.png" />
+    <Content Include="System_do_glosowan\static\images\wyniki.png" />
+    <Content Include="System_do_glosowan\static\scripts\bundle.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\CHANGELOG.md" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\dist\sweetalert2.all.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\dist\sweetalert2.all.min.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\dist\sweetalert2.css" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\dist\sweetalert2.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\dist\sweetalert2.min.css" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\dist\sweetalert2.min.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\LICENSE" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\package.json" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\README.md" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\constants.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\globalState.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\buttons-handlers.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\close.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\enable-disable-elements.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\getInput.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\hideLoading.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\keydown-handler.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\popup-click-handler.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\progress-steps.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\update.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\validation-message.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\_destroy.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\instanceMethods\_main.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\privateMethods.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\privateProps.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\scss\_animations.scss" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\scss\_body.scss" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\scss\_core.scss" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\scss\_mixins.scss" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\scss\_theming.scss" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\scss\_toasts-animations.scss" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\scss\_toasts-body.scss" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\scss\_toasts.scss" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\staticMethods.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\staticMethods\argsToParams.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\staticMethods\bindClickHandler.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\staticMethods\dom.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\staticMethods\fire.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\staticMethods\mixin.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\staticMethods\showLoading.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\staticMethods\timer.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\SweetAlert.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\sweetalert2.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\sweetalert2.scss" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\aria.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\classes.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\defaultInputValidators.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\DismissReason.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\animationEndEvent.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\domUtils.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\getters.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\index.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\init.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\inputUtils.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\measureScrollbar.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\parseHtmlToContainer.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\render.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\renderActions.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\renderCloseButton.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\renderContainer.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\renderContent.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\renderFooter.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\renderIcon.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\renderImage.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\renderInput.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\renderPopup.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\renderProgressSteps.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\dom\renderers\renderTitle.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\getTemplateParams.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\iosFix.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\isNodeEnv.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\openPopup.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\params.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\scrollbarFix.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\setParameters.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\Timer.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\utils\utils.js" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\src\variables.scss" />
+    <Content Include="System_do_glosowan\static\scripts\node_modules\sweetalert2\sweetalert2.d.ts" />
+    <Content Include="System_do_glosowan\static\scripts\scripts.js" />
+    <Content Include="System_do_glosowan\templates\aktywacja.html" />
+    <Content Include="System_do_glosowan\templates\blad.html" />
+    <Content Include="System_do_glosowan\templates\dodawanie_odpowiedzi.html" />
+    <Content Include="System_do_glosowan\templates\dodawanie_pytania.html" />
+    <Content Include="System_do_glosowan\templates\dodawanie_uczestnikow.html" />
+    <Content Include="System_do_glosowan\templates\edycja.html" />
+    <Content Include="System_do_glosowan\templates\edycja_pytania_odpowiedzi.html" />
+    <Content Include="System_do_glosowan\templates\edytuj_dane_glosowania.html" />
+    <Content Include="System_do_glosowan\templates\informacje.html" />
+    <Content Include="System_do_glosowan\templates\koniec_resetu_hasla.html" />
+    <Content Include="System_do_glosowan\templates\kopiuj_grupy.html" />
+    <Content Include="System_do_glosowan\templates\kopiuj_grupy_potwierdz.html" />
+    <Content Include="System_do_glosowan\templates\logowanie.html" />
+    <Content Include="System_do_glosowan\templates\obserwuj_jawne.html" />
+    <Content Include="System_do_glosowan\templates\oddanie_glosu.html" />
+    <Content Include="System_do_glosowan\templates\opusc_glosowanie_potwierdz.html" />
+    <Content Include="System_do_glosowan\templates\potwierdzenie.html" />
+    <Content Include="System_do_glosowan\templates\rejestracja.html" />
+    <Content Include="System_do_glosowan\templates\reset.html" />
+    <Content Include="System_do_glosowan\templates\sledz_glosowanie.html" />
+    <Content Include="System_do_glosowan\templates\strona_startowa.html" />
+    <Content Include="System_do_glosowan\templates\tworzenie_glosowania.html" />
+    <Content Include="System_do_glosowan\templates\usuniecie.html" />
+    <Content Include="System_do_glosowan\templates\usuniecie_glosowania.html" />
+    <Content Include="System_do_glosowan\templates\usun_odpowiedz_potwierdz.html" />
+    <Content Include="System_do_glosowan\templates\usun_pytanie_potwierdz.html" />
+    <Content Include="System_do_glosowan\templates\pdf.html" />
+    <Content Include="System_do_glosowan\templates\wybor_glosowania.html" />
+    <Content Include="System_do_glosowan\templates\wykresy.html" />
+    <Content Include="System_do_glosowan\templates\wyszukiwarka.html" />
+    <Content Include="System_do_glosowan\templates\zalogowany.html" />
+    <Content Include="System_do_glosowan\templates\zapomniane.html" />
+    <Content Include="System_do_glosowan\templates\zarzadzanie_glosowaniem.html" />
+    <Content Include="System_do_glosowan\templates\zmiana_hasla.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda37-64" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
